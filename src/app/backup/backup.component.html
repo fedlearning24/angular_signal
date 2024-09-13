@@ -1,0 +1,148 @@
+<!-- <h1>Built-in Control Flows :</h1> -->
+
+<!-- <label for="">Number 1 : </label> <input type="number" [(ngModel)]="num1"> <br><br>
+<label for="">Number 2 : </label> <input type="number" [(ngModel)]="num2">
+<br><br> -->
+
+<!-- Example with *ngIf -->
+<!-- <div *ngIf="num1 > num2; else elseStatement">
+  <b>{{num1}} is greater than {{num2}}</b>
+</div>
+<ng-template #elseStatement>
+  <b>{{num1}} is lesser than {{num2}}</b>
+</ng-template> -->
+
+<!-- @if(num1 > num2){
+  <b>{{num1}} is greater than {{num2}}</b>
+}@else if(num2 > num1){
+  <b>{{num1}} is lesser than {{num2}}</b>
+}@else{
+  <b>{{num1}} is equal to {{num2}}</b>
+} -->
+
+<!-- Example of @for() -->
+<!-- <ul>
+  <li *ngFor="let country of countryName">
+    {{country}}
+  </li>
+</ul> -->
+
+<!-- <ul>
+  @for(country of countryName; track country; let i = $index, count = $count, first=$first, last=$last, even=$even, odd
+  = $odd){
+  <li>{{count}}</li> -->
+<!-- <li>{{i}} : {{country}} : First - {{first}} : last - {{last}} : even - {{even}} : odd - {{odd}}</li> -->
+<!-- @if(even == true){
+  <li style="color: brown;">{{country}}</li>
+  }@else if(odd == true){
+  <li style="color: greenyellow;">{{country}}</li>
+  }@else{
+  <li>{{country}}</li>
+  }
+  }@empty{
+  <b>No Country Found.</b>
+  }
+</ul> -->
+
+<!-- Example of @switch -->
+
+<!-- <div [ngSwitch]="modesOfTransport">
+  <div *ngSwitchCase="'roadway'">We can travel by Bus, Car, Auto etc..</div>
+  <div *ngSwitchCase="'airway'">We can travel by Flight.</div>
+  <div *ngSwitchCase="'railway'">We can travel by Train.</div>
+  <div *ngSwitchDefault>No way found.</div>
+</div> -->
+
+<!-- @switch(modesOfTransport){
+  @case('roadway'){
+    <b>We can travel by Bus, Car, Auto etc..</b>
+  }
+  @case('airway'){
+    <b>We can travel by Flight.</b>
+  }
+  @case('railway'){
+    <b>We can travel by Train.</b>
+  }
+  @default{
+    <b>No way found.</b>
+  }
+} -->
+
+<!-- ---------------------------------------------------------------------- -->
+
+<h1>Deferrable Views :</h1>
+
+<!-- 1. defer -->
+ <!-- @defer{
+    <app-student></app-student>
+ } -->
+
+<!-- 2. placeholder -->
+<!-- @defer{
+    <app-student></app-student>
+ }@placeholder(minimum 1000ms){
+    <p>Student information table placeholder</p>
+ } -->
+
+<!-- 3. loading -->
+<!-- @defer{
+    <app-student></app-student>
+}@loading(minimum 1000ms){
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAY1BMVEX////t7e3b29u4uLimpqaDg4NwcHBAQEBNTU3IyMiUlJQzMzNeXl5bW1suLi5ra2vOzs6dnZ1ISEj39/fn5+d8fHzV1dWysrJ2dnY4ODjh4eGOjo4hISFWVlZlZWW+vr4aGhrh1HtrAAAEPUlEQVR4nO2a6ZaiMBBGk4AswZYl7Kj0+z/lQFgkITYwQuiZU/efHmxvVxVfAoIQAAAAAAAAAAAAAAAA0MFcl53tIBNf7/dnfLaFRP7ted+Xsy0k7Jvn3aKzLSRASgW55Jl8pqmlGNN1RpaOV9zoGimGG/RImTfbtj2yQqp1wnpqFbZSRSJ+mUqKaZRK7ZabuyTVOWmSQrQtle0sSWl1QoxLednPUn2hNDkhlHm8g9Olbi6lt1BNEa68VNVPUroLhVBwb62K4L2UfieErKKVyt9L6W5eSxm1pbrX76TOKNQQC4+xFJLUGYVqSsFL5YVqqXMK1cQCL1UxfHEhSOkoVGmaZPamOOv+3fPuVv/i3aLHdhQlj6KIQvnPdbFgp8OrhmDqNP/+mBBS7mVV2Y7j2La8sau8aYLiMBxaqS4UJpy9rniSqJFyItsXe0j4ZkHe7b2RYiXZV8ooHE7kJeX0ffNeeEX6RkpwGpUI2e2UpHbUadmOMFrZ1zNQHS8PdEz2d2pOv8uo9TC2fhi/lOJ9U8L9svse2rmiY++ZdG7PMvV/PHMGLY+Wy8f3nzqmcy/iKhpHK1s+vOW4zr0IkqLXKlZN1stpt8xUUV+7HkbPNUcP41QevDSzkPcwypcPHaU07BZw0uxaolVnINszwhcIKF2ZCgwfNt8AAJwApv6Man4R8QMsDWakH+UES5yvGY/HhohmropNmx+Z4HFV8Fi5R2gplVLuJyvPr5T6le3bYdAxmQ86gQURAP4jiOoemhIcBHruMWJqNWG1yio2sszQ8GQAy3zfsiy/Wj4UIddoyIzP8nuZIGmVGqlVv/bXRkd95GVWSq+dk/Wsl49uhi/rrbLDRgubfq/kW6ucmj2CMRIcMVqstgalq7m6HTgYi2VsWsdXESTPXmnrLsEdi7XzaJX0OQxTvrJzL8holX20uZMwByVffErCpaGyak0+CTGQvrR2i4e675x1pUID3PySJIqWxKZphsK3Y3ccrdV3JhegQzaJZYkvDYliv+6aLWKncN1rKe9x/wVmWyn/Ka8XWTKVmjxp1kmJzy208ZDxxNpJqkyeT2v2yE2Zt5UaqldWlFZ9K2MuFc4amzZLYb3bqMeGMR+FkBfK7F+ZrdRQtZpbze/VYnLwJYOb8EIN/3hIG4bfSRmXWru/2Q/GlZIxtAQpFHRWuqX4lF+qsRuiFMr4VMmzfjA8Di7561SSpEioiIWj6aY8nLwhSiGDS21ekj6hi4NkMsmyVB8LGkvF6CzMZak+QTfcn/kUKQ6UUlhzLDDulAjn1kwKpXpjwZDiQC3FeCyYe611C5Rdboo7o7kUKnXGQi0seu+luiUw1FOqTkraA6iksEapuNlvzvZ2KikUhGaYaYqqeL6DU0uhtN7zUmEzaqmTAam1GO12ePNjMAeDTUrNX3fPnpWHPqUBAAAAAAAAAAAAAADwb/EHjPVJRkyJO14AAAAASUVORK5CYII=" alt="loading.....">
+} -->
+
+<!-- 4. error -->
+<!-- @defer{
+    <app-student></app-student>
+ }@error{
+    <p>Failed to load the table</p>
+ } -->
+
+<!-- 1. when -->
+<!-- @defer(when isLoading){
+    <app-student></app-student>
+}@loading(minimum 1000ms){
+    <p>Loading student table...</p>
+} -->
+
+<!-- 2. on  -->
+ <!-- 1. immediate -->
+  <!-- @defer(on immediate){
+    <app-student></app-student>
+  } -->
+
+ <!-- 2. timer -->
+  <!-- @defer(on timer(1000ms)){
+    <app-student></app-student>
+  } -->
+
+ <!-- 3. idle -->
+ <!-- @defer(on idle){
+    <app-student></app-student>
+  } -->
+
+ <!-- 4. viewport -->
+  <!-- @defer(on viewport){
+    <app-student></app-student>
+  }@placeholder(minimum 2s){
+    <p>Loading student table...</p>
+  } -->
+
+ <!-- 5. interaction -->
+  <!-- <button #interactionButton>Interaction</button> -->
+  <!-- @defer(on interaction){
+    <app-student></app-student>
+  }@placeholder{
+    <p>Loading student table...</p>
+  } -->
+
+ <!-- 6. hover -->
+  <!-- <button #hoverBtn>Hover</button> -->
+  <!-- @defer(on hover; on timer(3s)){
+    <app-student></app-student>
+  }@placeholder{
+    <p>Loading student table...</p>
+  } -->
+
+<!-- ---------------------------------------------------------------------- -->
+

@@ -1,0 +1,22 @@
+<div>
+    <b>Student Info!</b><br><br>
+    <table>
+        <thead>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email ID</th>
+            <th>Address</th>
+        </thead>
+        <tbody>
+            @for(student of studentInfo; track student.id){
+                <tr>
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.email}}</td>
+                    <td>{{student.address}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
